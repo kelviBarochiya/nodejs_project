@@ -1,0 +1,8 @@
+class UserConfig{
+    constructor(email, password){
+        this.email = email;
+        this.password = password;
+    }
+}
+
+module.exports = new UserConfig('kelvi@gmail.com','12345');

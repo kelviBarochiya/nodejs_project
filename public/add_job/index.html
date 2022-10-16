@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        CRUD
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #7d2ae8;
+  padding: 30px;
+}
+.container{
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  perspective: 2700px;
+}
+.forms .form-content .button{
+  color: #fff;
+  margin-top: 40px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>ADD JOB DETAILS</h1>
+        <div class="cover">
+          <div class="front">
+            <div class="text">
+              
+            </div>
+          </div>
+          <div class="back">
+            
+          </div>
+        </div>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div class="form-content"></div>
+                    <div>
+                        <label>Company Name*</label><label class="validation-error hide" id="fullNameValidationError"></label>
+                        <input type="text" name="companyName" id="companyName">
+                    </div><br>
+                    <div>
+                        <label>Company emailid</label>
+                        <input type="text" name="companyemailid" id="companyemailid">
+                    </div><br>
+                    <div>
+                        <label>phone</label>
+                        <input type="text" name="phone" id="phone">
+                    </div><br>
+                    <div>
+                        <label>Requirement</label>
+                        <input type="text" name="requirement" id="requirement">
+                    </div><br>
+                    <div>
+                        <label>City</label>
+                        <input type="text" name="city" id="city">
+                    </div><br>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit" width="20px"><br><br>
+                        <input type="reset" value="Reset">
+                    </div>
+                </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="jobList">
+                    <thead>
+                        <tr>
+                            <th>CompanyName</th>
+                            <th>Companyemailid</th>
+                            <th>phone</th>
+                            <th>Requirement</th>
+                            <th>City</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
